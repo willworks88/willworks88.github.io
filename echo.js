@@ -28,6 +28,17 @@ window.onload = function() {
 	
 	my_div.innerHTML = ""+latlon.lat+" ,"+latlon.lon;
 	
+	
+	try {
+		// Fix up for prefixing
+		window.AudioContext = window.AudioContext||window.webkitAudioContext;
+		context = new AudioContext();
+		my_div.innerHTML += "  audio working";
+	  }
+	  catch(e) {
+		alert('Web Audio API is not supported in this browser');
+	  }
+	
   });
 };
 
