@@ -44,7 +44,6 @@ window.onload = function() {
 	
 	my_div.innerHTML = ""+latlon.lat+" ,"+latlon.lon;
 	
-	
 	try {
 		// Fix up for prefixing
 		window.AudioContext = window.AudioContext||window.webkitAudioContext;
